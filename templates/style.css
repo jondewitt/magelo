@@ -7,6 +7,13 @@ BODY {
   background: #ffffff url(../images/fbg.png) 0px 70px repeat-x;
   color: #FFFFFF;
   font-family:arial;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.wrapper {
+  display: flex;
+  padding-top: 30px;
 }
 
 /* ----------------------------------------------
@@ -243,7 +250,7 @@ INPUT.search {
   padding: 0;
   position: absolute;
 }
-.Slot:hover {
+.Slot[style*="background-image"] {
 	cursor: pointer;
 }
 
@@ -264,17 +271,15 @@ INPUT.search {
           side nav bar
 ------------------------------------------------- */
 .NavOuter {
-  position: absolute;	
+  flex: 0 1 auto;
   background-image: url(../images/light.gif);
-  width: 80px;
-  max-width: 66px;
   top: 180px;
-  left: -8px;
   padding: 11px 5px 9px 5px;
   border: 2px #7b714a solid;
   font-family:		arial;
   font-size: 9pt ;
-  color: #FFFFFF ;
+  color: #FFFFFF;
+  margin-bottom: auto;
 }
 .NavInner {
   background-image: url(../images/dark.gif);
@@ -286,19 +291,54 @@ INPUT.search {
 }
 
 
+#container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+#container > div {
+  width: 640px;
+  max-width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+#inventory-wrapper {
+  display: flex;
+  justify-content: center;
+  flex: 0 1 auto;
+}
+
+#bank-wrapper {
+  display: flex;
+  justify-content: center;
+  flex: 0 0 auto;
+}
+
+#tooltip-wrapper {
+  flex: 0 0 100%;
+  display: flex;
+  margin-top: 20px;
+}
+
 /* ----------------------------------------------
           Item $ Error window stylesheets
 ------------------------------------------------- */
 .ItemOuter {
   position: relative;	
   background-image: url(../images/light.gif);
-  width: 364px;
-  max-width: 350px;
+  width: 420px;
   padding: 11px 5px 9px 5px;
   border: 2px #7b714a solid;
-  font-family:		arial;
+  font-family: arial;
   font-size: 9pt ;
-  color: #FFFFFF ;
+  color: #FFFFFF;
 }
 .ItemInner {
   background-image: url(../images/dark.gif);
@@ -314,7 +354,7 @@ INPUT.search {
   left: 4px;
   border: 0px;
   padding: 0px;
-  width: 352px;
+  width: 420px;
   height: 21px;
   font-family:		arial;
   font-size: 9pt ;
@@ -337,7 +377,7 @@ INPUT.search {
   line-height:21px;
   top: 0px;
   left: 14px;
-  width: 324px;
+  width: calc(100% - 28px);
   height: 21px;
   border: 0px;
   padding: 0px;
@@ -346,7 +386,7 @@ INPUT.search {
   background-image: url(../images/rightt.gif);
   position: absolute;
   top: 0px;
-  left: 338px;
+  right: 0;
   width: 14px;
   height: 21px;
   border: 0px;

@@ -247,7 +247,7 @@ include("include/header.php");
 
 //build body template
 $template->set_filenames(array(
-  'character' => 'character_body.tpl')
+  'character' => 'character_body.php')
 );
 
 $template->assign_vars(array(  
@@ -382,9 +382,8 @@ foreach ($allitems as $value) {
   } 
 }
 
-/* (bank display disabled)
 //dump bank items ICONS
-if (!$mypermission['bank']) {
+if (!!$mypermission['bank']) {
 	foreach ($allitems as $value) {
 	  if ($value->type() == BANK) 
 	    $template->assign_block_vars("bankitem", array( 
@@ -394,12 +393,11 @@ if (!$mypermission['bank']) {
 	    );
 	}
 }
-*/
 
 //dump items WINDOWS
 foreach ($allitems as $value) {
   if ($value->type() == INVENTORY && $mypermission['bags']) continue; 
-  //if ($value->type() == BANK && $mypermission['bank']) continue;
+  if ($value->type() == BANK && $mypermission['bank']) continue;
     $template->assign_block_vars("item", array(
       'SLOT' => $value->slot(),	   
       'NAME' => $value->name(),

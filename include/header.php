@@ -25,7 +25,7 @@ if ( !defined('INCHARBROWSER') )
 include("config.php");
 
 $template->set_filenames(array(
-  'header' => 'header_body.tpl')
+  'header' => 'header_body.php')
 );
 
 $template->assign_vars(array(  
