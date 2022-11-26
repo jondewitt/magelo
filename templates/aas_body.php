@@ -8,7 +8,6 @@
     <div class='FreeButton' onclick="window.location='corpse.php?char={NAME}';">{L_CORPSE}</div>
     <div class='FreeButton' onclick="window.location='factions.php?char={NAME}';">{L_FACTION}</div>
     <div class='FreeButton' onclick="window.location='charmove.php?char={NAME}';">{L_CHARMOVE}</div>
-    <div class='FreeButton' onclick="window.external.AddFavorite(location.href, document.title);">{L_BOOKMARK}</div>
   </div>
 </div>
 
