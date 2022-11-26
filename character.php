@@ -73,7 +73,8 @@ $cp 		= $char->GetValue('copper');
 $bpp 		= $char->GetValue('platinum_bank');
 $bgp 		= $char->GetValue('gold_bank');
 $bsp 		= $char->GetValue('silver_bank');
-$bcp 		= $char->GetValue('copper_bank'); 
+$bcp 		= $char->GetValue('copper_bank');
+$birthday = $char->GetValue('birthday');
 
 // solar: new stats 2020-12-21
 $query = "SELECT
@@ -299,6 +300,7 @@ $template->assign_vars(array(
   'DISEASE_cap' => $character_magelo_stats['DR_cap'],
   'COLD_cap' => $character_magelo_stats['CR_cap'],
   'WEIGHT' => $character_magelo_stats['weight'],
+  'BIRTHDAY' => FormatBirthday($birthday),
   'PP' => (($mypermission['coininventory'])?$language['MESSAGE_DISABLED']:$pp),
   'GP' => (($mypermission['coininventory'])?$language['MESSAGE_DISABLED']:$gp),
   'SP' => (($mypermission['coininventory'])?$language['MESSAGE_DISABLED']:$sp),
@@ -342,7 +344,8 @@ $template->assign_vars(array(
   'L_BOOKMARK' => $language['BUTTON_BOOKMARK'],
   'L_CHARMOVE' => $language['BUTTON_CHARMOVE'],
   'L_CONTAINER' => $language['CHAR_CONTAINER'],
-  'L_DONE' => $language['BUTTON_DONE'])
+  'L_DONE' => $language['BUTTON_DONE'],
+  'L_BIRTHDAY' => $language['CHAR_BIRTHDAY'])
 );
 
 //dump inventory items ICONS

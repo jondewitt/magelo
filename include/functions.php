@@ -235,7 +235,7 @@ function generate_pagination($base_url, $num_items, $per_page, $start_item, $add
 			$page_string .= '&nbsp;&nbsp;<a href="' . ($base_url . "&amp;start=" . ( $on_page * $per_page ) ) . '">' . $language['SEARCH_NEXT'] . '</a>';
 		}
 	}
-	$page_string = $lang['Goto_page'] . ' ' . $page_string;
+	$page_string = $language['Goto_page'] . ' ' . $page_string;
 	return $page_string;
 }
 
@@ -252,4 +252,11 @@ function IsAlphaNumericSpace($str) {
    if (str_replace($old, $new, $str) == "") { return (true); }
    else { return (false); }
 }
+
+function FormatBirthday($timestamp) {
+  $creation = $timestamp;
+  $birthday = date("M d, Y", $creation);
+  return $birthday;
+}
+
 ?>

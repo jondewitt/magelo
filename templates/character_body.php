@@ -1,14 +1,14 @@
 <div class='NavOuter'> 
   <div class='NavInner'> 
-    <div class='FreeButton' style="color:#606060;margin:3px">{L_INVENTORY}</div>
-    <div class='FreeButton' onclick="window.location='aas.php?char={FIRST_NAME}';" style="margin:3px">{L_AAS}</div> 
-    <div class='FreeButton' onclick="window.location='keys.php?char={FIRST_NAME}';" style="margin:3px">{L_KEYS}</div>
-    <div class='FreeButton' onclick="window.location='flags.php?char={FIRST_NAME}';" style="margin:3px">{L_FLAGS}</div> 
-    <div class='FreeButton' onclick="window.location='skills.php?char={FIRST_NAME}';" style="margin:3px">{L_SKILLS}</div> 
-    <div class='FreeButton' onclick="window.location='corpse.php?char={FIRST_NAME}';" style="margin:3px">{L_CORPSE}</div> 
-    <div class='FreeButton' onclick="window.location='factions.php?char={FIRST_NAME}';" style="margin:3px">{L_FACTION}</div> 
-    <div class='FreeButton' onclick="window.location='charmove.php?char={FIRST_NAME}';" style="margin:3px">{L_CHARMOVE}</div> 
-    <div class='FreeButton' onclick="window.external.AddFavorite(location.href, document.title);" style="margin:3px">{L_BOOKMARK}</div> 
+    <div class='FreeButton' style="color:#606060;">{L_INVENTORY}</div>
+    <div class='FreeButton' onclick="window.location='aas.php?char={FIRST_NAME}';">{L_AAS}</div> 
+    <div class='FreeButton' onclick="window.location='keys.php?char={FIRST_NAME}';">{L_KEYS}</div>
+    <div class='FreeButton' onclick="window.location='flags.php?char={FIRST_NAME}';">{L_FLAGS}</div> 
+    <div class='FreeButton' onclick="window.location='skills.php?char={FIRST_NAME}';">{L_SKILLS}</div> 
+    <div class='FreeButton' onclick="window.location='corpse.php?char={FIRST_NAME}';">{L_CORPSE}</div> 
+    <div class='FreeButton' onclick="window.location='factions.php?char={FIRST_NAME}';">{L_FACTION}</div> 
+    <div class='FreeButton' onclick="window.location='charmove.php?char={FIRST_NAME}';">{L_CHARMOVE}</div> 
+    <div class='FreeButton' onclick="window.external.AddFavorite(location.href, document.title);">{L_BOOKMARK}</div> 
   </div> 
 </div> 
 
@@ -48,7 +48,7 @@
                 {L_REGEN}<br>{L_FT}<br>{L_ATK}<br>{L_DS}<br>{L_HASTE}
               </td> 
               <td>{REGEN} / {REGEN_cap}<br>{FT} / {FT_cap}<br>{ATK_item} / {ATK_item_cap}<br>{DS}<br>{HASTE}%
-              </td> 
+              </td>
             </tr> 
           </table> 
         </div> 
@@ -110,7 +110,14 @@
             <tr> 
               <td>{L_WEIGHT}</td> 
               <td nowrap>{WEIGHT} / {STR}</td> 
-            </tr> 
+            </tr>
+            <tr><td class='Divider' colspan='2'></td></tr>
+            <tr>
+              <td>{L_BIRTHDAY}</td>
+            </tr>
+            <tr>
+              <td colspan='2'>{BIRTHDAY}</td>
+            </tr>
           </table> 
         </div>  
 

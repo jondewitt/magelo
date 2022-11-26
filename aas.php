@@ -75,7 +75,7 @@ include("include/header.php");
 
 //build body template
 $template->set_filenames(array(
-  'aas' => 'aas_body.tpl')
+  'aas' => 'aas_body.php')
 );
 
 $Color = "7b714a";

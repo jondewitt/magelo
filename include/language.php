@@ -451,7 +451,7 @@ $language['SETTINGS_DISABLED'] = "Disabled";
 $language['CHAR_INVENTORY'] = "Inventory"; 
 $language['CHAR_BANK'] = "Bank"; 
 $language['CHAR_CONTAINER'] = "Container"; 
-$language['CHAR_REGEN'] = "Regen "; 
+$language['CHAR_REGEN'] = "Regen"; 
 $language['CHAR_FT'] = "FT"; 
 $language['CHAR_DS'] = "DS"; 
 $language['CHAR_HASTE'] = "Haste"; 
@@ -469,10 +469,11 @@ $language['CHAR_WIS'] = "WIS";
 $language['CHAR_CHA'] = "CHA"; 
 $language['CHAR_POISON'] = "POISON"; 
 $language['CHAR_MAGIC'] = "MAGIC"; 
-$language['CHAR_DISEASE'] = "DISEASE  "; 
+$language['CHAR_DISEASE'] = "DISEASE"; 
 $language['CHAR_FIRE'] = "FIRE"; 
 $language['CHAR_COLD'] = "COLD"; 
 $language['CHAR_WEIGHT'] = "WEIGHT"; 
+$language['CHAR_BIRTHDAY'] = "DOB";
 
 
 //buttons 

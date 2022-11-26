@@ -15,6 +15,12 @@ function display(type, id, prefix) {
     target.style.display = 'block'; 
   } 
 } 
+function color(id) {
+  if (target = document.getElementById("link" + id)) {
+    for(var i=0; i < 100; i++) if (white = document.getElementById("link" + i)) white.style.color = '#FFFFFF';	    
+    target.style.color = '#7b714a';
+  }
+}
 </script> 
 </head>
 <body>
