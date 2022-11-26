@@ -59,7 +59,7 @@ include("include/header.php");
 
 //build body template 
 $template->set_filenames(array( 
-  'keys' => 'keys_body.tpl') 
+  'keys' => 'keys_body.php') 
 ); 
 
 $template->assign_vars(array(  

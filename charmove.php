@@ -107,7 +107,7 @@ include("include/header.php");
 
 if ($names && $logins && $zones) {
 	$template->set_filenames(array(
-	  'mover' => 'charmove_result_body.tpl')
+	  'mover' => 'charmove_result_body.php')
 	);
 	
 	$template->assign_vars(array( 
@@ -124,7 +124,7 @@ if ($names && $logins && $zones) {
 }
 else {
 	$template->set_filenames(array(
-	  'mover' => 'charmove_body.tpl')
+	  'mover' => 'charmove_body.php')
 	);
 	
 	$template->assign_vars(array( 

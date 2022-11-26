@@ -151,7 +151,7 @@ function message_die($dietitle, $text) {
 	include("include/header.php");
 	
 	$template->set_filenames(array(
-	  'message' => 'message_body.tpl')
+	  'message' => 'message_body.php')
 	);
 	
 	$template->assign_vars(array(  
@@ -171,7 +171,7 @@ function message($title, $text) {
 	global $language;
 	global $template;
 	$template->set_filenames(array(
-	  'message' => 'message_body.tpl')
+	  'message' => 'message_body.php')
 	);
 	
 	$template->assign_vars(array(  

@@ -58,7 +58,7 @@ include("include/header.php");
 
 //build body template
 $template->set_filenames(array(
-  'corpse' => 'corpse_body.tpl')
+  'corpse' => 'corpse_body.php')
 );
 
 $template->assign_vars(array(  

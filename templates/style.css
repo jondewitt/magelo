@@ -1,10 +1,10 @@
 * {
   margin: 0px;
   padding: 0px;
+  box-sizing: border-box;
 }
 
 BODY {
-  background: #ffffff url(../images/fbg.png) 0px 70px repeat-x;
   color: #FFFFFF;
   font-family:arial;
   overflow-y: scroll;
@@ -95,14 +95,14 @@ TABLE.db_explain CAPTION
 DIV.searchbar {
   padding: 0px;
   width: 100%;
-  background: #222222 url(../images/weave.png);
+  background: black;
   color: #FFFFFF;
   font-family:arial;
   font-size: 8pt;
+  box-shadow: 0 0 20px #000;
 }
 
 DIV.logo {
-  background: url(../images/headerlogowithbg.png) 0 0 no-repeat;
   height: 70px;
   max-height: 55px;
   padding: 10px 50px 5px 50px;
@@ -350,6 +350,7 @@ INPUT.search {
   font-family:		arial;
   font-size: 9pt ;
   color: #FFFFFF ;
+  width: 100%;
 }
 .ItemTitle {
   position: absolute;
@@ -357,7 +358,7 @@ INPUT.search {
   left: 4px;
   border: 0px;
   padding: 0px;
-  width: 420px;
+  width: calc(100% - 10px);
   height: 21px;
   font-family:		arial;
   font-size: 9pt ;
@@ -529,8 +530,6 @@ INPUT.search {
   background-image: url(../images/light.gif);
   width: 191px;
   height: 377px;
-  max-width: 177px;
-  max-height: 353px;
   padding: 11px 5px 9px 5px;
   border: 2px #7b714a solid;
   font-family:		arial;

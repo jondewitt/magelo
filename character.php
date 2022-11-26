@@ -262,7 +262,7 @@ $template->assign_vars(array(
   'ATK_item' => $character_magelo_stats['atk_item'],
   'ATK_item_cap' => $character_magelo_stats['atk_item_cap'],
   'FIRST_NAME' => $name,
-  'LAST_NAME' => $last_name,
+  'LAST_NAME' => str_replace('_', ' ', $last_name),
   'TITLE' => $title,
   'GUILD_NAME' => $guild_name,
   'LEVEL' => $level,

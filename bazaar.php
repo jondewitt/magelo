@@ -121,7 +121,7 @@ include("include/header.php");
 
 //build body template
 $template->set_filenames(array(
-  'bazaar' => 'bazaar_body.tpl')
+  'bazaar' => 'bazaar_body.php')
 );
 
 $template->assign_vars(array(  

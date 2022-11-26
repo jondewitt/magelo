@@ -102,12 +102,12 @@ include("include/header.php");
 //build body template
 if (!$mypermission['advfactions']) {
 	$template->set_filenames(array(
-		'factions' => 'factions_advanced_body.tpl')
+		'factions' => 'factions_advanced_body.php')
 	);
 }
 else {
 	$template->set_filenames(array(
-		'factions' => 'factions_basic_body.tpl')
+		'factions' => 'factions_basic_body.php')
 	);
 }
 

@@ -24,7 +24,7 @@ if ( !defined('INCHARBROWSER') )
 }
 
 $template->set_filenames(array(
-  'footer' => 'footer_body.tpl')
+  'footer' => 'footer_body.php')
 );
 
 $template->assign_vars(array(  

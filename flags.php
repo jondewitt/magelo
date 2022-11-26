@@ -106,7 +106,7 @@ include("include/header.php");
 
 //build body template 
 $template->set_filenames(array( 
-  'flags' => 'flags_body.tpl') 
+  'flags' => 'flags_body.php') 
 );
 
 $template->assign_vars(array(  

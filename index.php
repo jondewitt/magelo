@@ -28,7 +28,7 @@ $d_title = $subtitle;
 include("include/header.php");
 
 $template->set_filenames(array(
-  'index' => 'index_body.tpl')
+  'index' => 'index_body.php')
 );
 
 $template->assign_vars(array(  

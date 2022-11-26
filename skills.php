@@ -57,7 +57,7 @@ $template->set_filenames(array(
 
 //build body template
 $template->set_filenames(array(
-  'skills' => 'skills_body.tpl')
+  'skills' => 'skills_body.php')
 );
 
 $template->assign_vars(array(  
