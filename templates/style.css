@@ -14,6 +14,7 @@ BODY {
 .wrapper {
   display: flex;
   padding-top: 30px;
+  flex-wrap: wrap;
 }
 
 /* ----------------------------------------------
@@ -271,23 +272,22 @@ INPUT.search {
           side nav bar
 ------------------------------------------------- */
 .NavOuter {
-  flex: 0 1 auto;
   background-image: url(../images/light.gif);
-  top: 180px;
   padding: 11px 5px 9px 5px;
   border: 2px #7b714a solid;
-  font-family:		arial;
-  font-size: 9pt ;
-  color: #FFFFFF;
-  margin-bottom: auto;
+  align-items: center;
+  margin: 0 auto 20px;
+  width: 640px;
+  max-width: 100%;
 }
 .NavInner {
   background-image: url(../images/dark.gif);
   border: 1px #444444 solid;
   padding: 6px;
-  font-family:		arial;
-  font-size: 9pt ;
-  color: #FFFFFF ;
+  font-family: arial;
+  font-size: 9pt;
+  color: #FFFFFF;
+  display: flex;
 }
 .NavInner .FreeButton {
   margin: 3px;
@@ -302,11 +302,11 @@ INPUT.search {
 }
 
 #container > div {
-  width: 640px;
+  width: 654px;
   max-width: 100%;
   margin: 0 auto;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
 }
