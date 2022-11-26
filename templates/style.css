@@ -288,6 +288,7 @@ INPUT.search {
   font-size: 9pt;
   color: #FFFFFF;
   display: flex;
+  justify-content: space-around;
 }
 .NavInner .FreeButton {
   margin: 3px;

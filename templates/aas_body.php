@@ -1,17 +1,18 @@
 <div class='NavOuter'>
-<div class='NavInner'>
-  <div class='FreeButton' onclick="window.location='character.php?char={NAME}';">{L_INVENTORY}</div>
-  <div class='FreeButton' style="color:606060;">{L_AAS}</div>
-  <div class='FreeButton' onclick="window.location='keys.php?char={NAME}';">{L_KEYS}</div>
-  <div class='FreeButton' onclick="window.location='flags.php?char={NAME}';">{L_FLAGS}</div>
-  <div class='FreeButton' onclick="window.location='skills.php?char={NAME}';">{L_SKILLS}</div>
-  <div class='FreeButton' onclick="window.location='corpse.php?char={NAME}';">{L_CORPSE}</div>
-  <div class='FreeButton' onclick="window.location='factions.php?char={NAME}';">{L_FACTION}</div>
-  <div class='FreeButton' onclick="window.location='charmove.php?char={NAME}';">{L_CHARMOVE}</div>
-  <div class='FreeButton' onclick="window.external.AddFavorite(location.href, document.title);">{L_BOOKMARK}</div>
+  <div class='NavInner'>
+    <div class='FreeButton' onclick="window.location='character.php?char={NAME}';">{L_INVENTORY}</div>
+    <div class='FreeButton' style="color:606060;">{L_AAS}</div>
+    <div class='FreeButton' onclick="window.location='keys.php?char={NAME}';">{L_KEYS}</div>
+    <div class='FreeButton' onclick="window.location='flags.php?char={NAME}';">{L_FLAGS}</div>
+    <div class='FreeButton' onclick="window.location='skills.php?char={NAME}';">{L_SKILLS}</div>
+    <div class='FreeButton' onclick="window.location='corpse.php?char={NAME}';">{L_CORPSE}</div>
+    <div class='FreeButton' onclick="window.location='factions.php?char={NAME}';">{L_FACTION}</div>
+    <div class='FreeButton' onclick="window.location='charmove.php?char={NAME}';">{L_CHARMOVE}</div>
+    <div class='FreeButton' onclick="window.external.AddFavorite(location.href, document.title);">{L_BOOKMARK}</div>
+  </div>
 </div>
-</div>
-<center>
+
+<div id='container'>
   <div class='FlagOuter'>
     <div class='FlagTitle'>
       <div class='FlagTitleLeft'></div>
@@ -61,4 +62,4 @@
       <br><center><div class='FreeButton' onclick="window.location='character.php?char={NAME}';">{L_DONE}</div></center>
     </div>
   </div>
-</center>
+</div>
