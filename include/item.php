@@ -225,24 +225,25 @@ function GetItem($item) {
 
 
 	// Elemental DMG
-	if (($item["elemdmgtype"]>0) AND ($item["elemdmgamt"]!=0)) { $Output .= $tab.strtolower_ucfirst($dbelements[$item["elemdmgtype"]])." DMG: ".sign($item["elemdmgamt"])."<br>\n"; }
+	if (($item["elemdmgtype"]>0) && ($item["elemdmgamt"]!=0)) { $Output .= $tab.strtolower_ucfirst($dbelements[$item["elemdmgtype"]])." DMG: ".sign($item["elemdmgamt"])."<br>\n"; }
 
 	//Bane DMG
-	if (($item["banedmgrace"]>0) AND ($item["banedmgraceamt"]!=0)) {
+	if (($item["banedmgrace"]>0) && ($item["banedmgraceamt"]!=0)) {
 		$Output .= $tab."Bane DMG: ";
 		$Output .= GetFieldByQuery("name","SELECT name FROM $tbraces WHERE id=".$item["banedmgrace"]);
 		$Output .= " ".sign($item["banedmgraceamt"])."<br>\n";
 	}
-	if (($item["banedmgbody"]>0) AND ($item["banedmgamt"]!=0)) {
+	if (($item["banedmgbody"]>0) && ($item["banedmgamt"]!=0)) {
 		$Output .= $tab."Bane DMG: ".$dbbodytypes[$item["banedmgbody"]];
 		$Output .= " ".sign($item["banedmgamt"])."<br>\n";
 	}
 
 	// Skill Mods
-	if (($item["skillmodtype"]>0) AND ($item["skillmodvalue"]!=0)) { $Output .= $tab."Skill Mod: ".strtolower_ucfirst($dbskills[$item["skillmodtype"]])." ".sign($item["skillmodvalue"])."%<br>\n"; }
+	if (($item["skillmodtype"]>0) && ($item["skillmodvalue"]!=0)) { $Output .= $tab."Skill Mod: ".strtolower_ucfirst($dbskills[$item["skillmodtype"]])." ".sign($item["skillmodvalue"])."%<br>\n"; }
 
 	//item proc
-	if (($item["proceffect"]>0) AND ($item["proceffect"]<65535)) {
+  $CombatTypes = array(0, 1, 2, 3, 4, 5);
+	if (($item["proceffect"]>0) && ($item["proceffect"]<65535) && in_array($item["itemtype"],$CombatTypes)) {
 		$Output .= $tab."Effect: <a href='".$spellurl.$item["proceffect"]."' target='_blank'>".GetFieldByQuery("name","SELECT name FROM $tbspells WHERE id=".$item["proceffect"])."</a>";
 		$Output .= "&nbsp;(Combat)";
 		$Output .= " <i>(Level ".$item["proclevel2"].")</i>";
@@ -250,7 +251,7 @@ function GetItem($item) {
 	}
 
 	// worn effect
-	if (($item["worneffect"]>0) AND ($item["worneffect"]<65535)) {
+	if (($item["worneffect"]>0) && ($item["worneffect"]<65535)) {
 		$Output .= $tab."Effect: <a href='".$spellurl.$item["worneffect"]."' target='_blank'>".GetFieldByQuery("name","SELECT name FROM $tbspells WHERE id=".$item["worneffect"])."</a>";
 		$Output .= "&nbsp;(Worn)";
 		$Output .= " <i>(Level ".$item["wornlevel"].")</i>";
@@ -258,14 +259,14 @@ function GetItem($item) {
 	}
 
 	// focus effect
-	if (($item["focuseffect"]>0) AND ($item["focuseffect"]<65535)) {
+	if (($item["focuseffect"]>0) && ($item["focuseffect"]<65535)) {
 		$Output .= $tab."Focus: <a href='".$spellurl.$item["focuseffect"]."' target='_blank'>".GetFieldByQuery("name","SELECT name FROM $tbspells WHERE id=".$item["focuseffect"])."</a>";
 		if ($item["focuslevel"]>0) { $Output .= " <i>(Level ".$item["focuslevel"].")</i>";  }
 		$Output .= "<br>\n";
 	}
 
 	// clicky effect
-	if (($item["clickeffect"]>0) AND ($item["clickeffect"]<65535)) {
+	if (($item["clickeffect"]>0) && ($item["clickeffect"]<65535)) {
 		$Output .= $tab."Effect: <a href='".$spellurl.$item["clickeffect"]."' target='_blank'>".GetFieldByQuery("name","SELECT name FROM $tbspells WHERE id=".$item["clickeffect"])."</a>";
 		$Output .= "&nbsp;(";
 		if ($item["clicktype"]==1) { $Output .= "Any Slot, "; }
@@ -396,7 +397,7 @@ function GetItem($item) {
 	}
 
 	// scroll
-	if (($item["scrolleffect"]>0) AND ($item["scrolleffect"]<65535)) {
+	if (($item["scrolleffect"]>0) && ($item["scrolleffect"]<65535)) {
 		$Output .= $tab."Effect: <a href='".$spellurl.$item["scrolleffect"]."' target='_blank'>".GetFieldByQuery("name","SELECT name FROM $tbspells WHERE id=".$item["scrolleffect"])."</a>";
 		$Output .= "<br>\n";
 	}

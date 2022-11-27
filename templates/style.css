@@ -92,7 +92,7 @@ TABLE.db_explain CAPTION
 }
  
  
-DIV.searchbar {
+.searchbar {
   padding: 0px;
   width: 100%;
   background: black;
@@ -102,10 +102,17 @@ DIV.searchbar {
   box-shadow: 0 0 20px #000;
 }
 
-DIV.logo {
+.logo {
   height: 70px;
-  max-height: 55px;
-  padding: 10px 50px 5px 50px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo input {
+  margin-right: 20px;
+  padding: 5px 10px;
 }
 
 .Bazaar {
@@ -115,27 +122,6 @@ DIV.logo {
   width: 130px;
   color: #FFFFFF;
   padding: 1px 5px 1px 5px;
-  font-family:arial;
-  font-size: 8pt; 
-}
-
-.SigBuilder {
-  border: 1px #555555 solid;
-  background-color: #0b0b10;
-  height: 15px;
-  width: 80px;
-  color: #FFFFFF;
-  padding: 0px 5px 0px 5px;
-  font-family:arial;
-  font-size: 8pt; 
-}
-
-INPUT.search {
-  border: 1px #000000 solid;
-  background-color: #dddddd;
-  color: #222222;
-  height: 15px;
-  padding: 0px 5px 0px 5px;
   font-family:arial;
   font-size: 8pt; 
 }
@@ -706,6 +692,7 @@ INPUT.search {
   font-family:		arial;
   font-size: 9pt ;
   color: #FFFFFF ;
+  width: 100%;
 }
 .FlagTitle {
   position: absolute;

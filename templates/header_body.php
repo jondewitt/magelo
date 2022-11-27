@@ -32,11 +32,11 @@
 <body>
   <div class='searchbar'>
     <div class='logo'>
-      <div style='float:right;' align='center'>
+      <div align='center'>
         <form method='GET' action='search.php'>
-          {L_NAME}: <input class='search' type='text' name='name'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          {L_GUILD}: <input class='search' type='text' name='guild'>&nbsp;&nbsp;&nbsp;&nbsp;
-          <input style='vertical-align:middle' type='image' src='images/go.gif'>
+          <input class='search' type='text' name='name' label='Character Search' placeholder='Character' title='Character Input' />
+          <input class='search' type='text' name='guild' label='Guild Search' placeholder='Guild' title='Guild Input' />
+          <input type='submit' value='Search' label='Submit' />
         </form>
       </div>
     </div>

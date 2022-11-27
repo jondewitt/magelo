@@ -80,7 +80,7 @@ include("include/header.php");
 
 //build body template
 $template->set_filenames(array(
-  'body' => 'search_body.tpl')
+  'body' => 'search_body.php')
 );
 
 $template->assign_vars(array(  
