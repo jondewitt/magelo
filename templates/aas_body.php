@@ -1,7 +1,7 @@
 <div class='NavOuter'>
   <div class='NavInner'>
     <div class='FreeButton' onclick="window.location='character.php?char={NAME}';">{L_INVENTORY}</div>
-    <div class='FreeButton' style="color:606060;">{L_AAS}</div>
+    <div class='FreeButton' onclick="window.location='aas.php?char={NAME}';">{L_AAS}</div>
     <div class='FreeButton' onclick="window.location='keys.php?char={NAME}';">{L_KEYS}</div>
     <div class='FreeButton' onclick="window.location='flags.php?char={NAME}';">{L_FLAGS}</div>
     <div class='FreeButton' onclick="window.location='skills.php?char={NAME}';">{L_SKILLS}</div>
